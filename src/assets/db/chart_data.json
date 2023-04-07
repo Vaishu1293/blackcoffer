@@ -1,0 +1,134 @@
+[{
+  "bar_res": {
+  "x_axis": [
+  "Aerospace & defence",
+  "Manufacturing",
+  "Retail",
+  "Financial services",
+  "Support services",
+  "Information Technology",
+  "Healthcare"
+  ],
+  "title": "sector",
+  "color": "#efbacb",
+  "y_axis": [
+  38,
+  19,
+  18,
+  17,
+  15,
+  14,
+  9
+  ]
+  },
+  "line_res": {
+  "x_axis": [
+  "Aerospace & defence",
+  "Manufacturing",
+  "Retail",
+  "Financial services",
+  "Support services",
+  "Information Technology",
+  "Healthcare"
+  ],
+  "title": "sector",
+  "color": "#e39233",
+  "y_axis": [
+  38,
+  19,
+  18,
+  17,
+  15,
+  14,
+  9
+  ]
+  },
+  "radar_res": {
+  "x_axis": [
+  "Aerospace & defence",
+  "Manufacturing",
+  "Retail",
+  "Financial services",
+  "Support services",
+  "Information Technology",
+  "Healthcare"
+  ],
+  "color": "#5af1d0",
+  "y_axis": [
+  38,
+  19,
+  18,
+  17,
+  15,
+  14,
+  9
+  ],
+  "title": "sector",
+  "hover": "#030c75"
+  },
+  "pie_res": {
+  "x_axis": [
+  "Construction",
+  "Security",
+  "Transport"
+  ],
+  "color": [
+  "#ef75f9",
+  "#758fc6",
+  "#a33157"
+  ],
+  "y_axis": [
+  3,
+  2,
+  2
+  ],
+  "hover": [
+  "#6abf20",
+  "#b951c5",
+  "#a21eab"
+  ]
+  },
+  "polar_res": {
+  "x_axis": [
+  "Construction",
+  "Security",
+  "Transport",
+  "Water",
+  "Media & entertainment"
+  ],
+  "color": [
+  "#dc80d2",
+  "#a06b4d",
+  "#bdf1e7",
+  "#bc0290",
+  "#9b804b"
+  ],
+  "y_axis": [
+  3,
+  2,
+  2,
+  2,
+  1
+  ]
+  },
+  "doughnut_res": {
+  "x_axis": [
+  "Construction",
+  "Security",
+  "Transport",
+  "Water"
+  ],
+  "color": [
+  "#8620bf",
+  "#0d6dc4",
+  "#5feec2",
+  "#81da68"
+  ],
+  "y_axis": [
+  3,
+  2,
+  2,
+  2
+  ]
+  }
+  }]

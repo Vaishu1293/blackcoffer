@@ -1,0 +1,40 @@
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Example CSS styles for ngx-pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.pagination > ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination > ul > li {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.pagination > ul > li.disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.pagination > ul > li > a {
+  color: #007bff;
+}
+
+.pagination > ul > li.active > a {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.pagination > ul > li > a:hover {
+  text-decoration: none;
+}

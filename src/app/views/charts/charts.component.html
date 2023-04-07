@@ -1,0 +1,148 @@
+
+  <c-row>
+    <c-col xs="12">
+      <c-card class="mb-4">
+        <c-card-header>
+          <form cRow lg="auto" [gutter]="3" class="align-items-center" name="search form">
+            <c-col [xs]="4">
+              <label cLabel class="visually-hidden" for="inlineFormInputGroupUsername" name="search label">
+                <strong>Table Data</strong>
+              </label>
+            </c-col>
+            <c-col [xs]="4">
+              <c-input-group>
+                <input cFormControl id="inlineFormInputGroupUsername" placeholder="Search" [(ngModel)]="searchQuery" (input)="applyFilter()" name="search query" />
+              </c-input-group>
+            </c-col>
+            <c-col [xs]="4">
+              <select [(ngModel)]="itemsPerPage" (change)="valueSelected($event)" name="select items">
+                <option value="3">3 items per page</option>
+                <option value="5">5 items per page</option>
+              </select>
+
+            </c-col>
+          </form>
+        </c-card-header>
+        <c-card-body>
+          <div class="table-responsive">
+            <table cTable>
+              <thead>
+                <tr>
+                  <th>Sl No</th>
+                  <th *ngFor="let key of keys" scope="col">{{ key }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let d of filteredData; let i=index">
+                  <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+                  <td *ngFor="let key of keys">{{ d[key] }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- <c-pagination [(ngModel)]="currentPage" [totalPages]="totalPages" (pageChange)="applyFilter()" aria-label="Page navigation example"></c-pagination> -->
+          <!-- Template code for pagination -->
+          <c-pagination aria-label="Page navigation example">
+            <c-page-item>
+              <a cPageLink (click)="onPageChange(currentPage - 1)">Previous</a>
+            </c-page-item>
+            <c-page-item *ngFor="let page of totalPagesArray()">
+              <a cPageLink (click)="onPageChange(page)">{{ page }}</a>
+            </c-page-item>
+            <c-page-item>
+              <a cPageLink (click)="onPageChange(currentPage + 1)">Next</a>
+            </c-page-item>
+          </c-pagination>
+
+          <!--<pagination-controls (pageChange)="currentPage = $event"></pagination-controls>-->
+        </c-card-body>
+      </c-card>
+    </c-col>
+
+    <c-col xs="12">
+      <c-card class="mb-4">
+        <c-card-header>
+          <form cRow lg="auto" [gutter]="3" class="align-items-center" name="search form">
+            <c-col [xs]="6">
+              <label cLabel class="visually-hidden" for="inlineFormInputGroupUsername" name="search label">
+                <strong>Select Data</strong>
+              </label>
+            </c-col>
+
+            <c-col [xs]="6">
+              <select [(ngModel)]="selectedItem" (change)="itemSelected($event)" name="select param">
+                <option [value]="i" *ngFor="let i of items">{{i}}</option>
+              </select>
+
+            </c-col>
+          </form>
+        </c-card-header>
+      </c-card>
+    </c-col>
+
+
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Bar Chart
+        </c-card-header>
+        <c-card-body>
+          <c-chart type="bar" [data]="chartBarData"></c-chart>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Line Chart
+        </c-card-header>
+        <c-card-body>
+          <c-chart type="line" [data]="chartLineData"></c-chart>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Doughnut Chart
+        </c-card-header>
+        <c-card-body>
+          <c-chart type="doughnut" [data]="chartDoughnutData"></c-chart>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Pie Chart
+        </c-card-header>
+        <c-card-body>
+          <c-chart type="pie" [data]="chartPieData"></c-chart>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
+  <c-row>
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Polar Area Chart
+        </c-card-header>
+        <c-card-body>
+          <c-chart type="polarArea" [data]="chartPolarAreaData"></c-chart>
+        </c-card-body>
+      </c-card>
+    </c-col>
+    <c-col xs="12" lg="6">
+      <c-card class="mb-4">
+        <c-card-header>
+          Radar Chart
+        </c-card-header>
+        <c-card-body>
+          <c-chart type="radar" [data]="chartRadarData"></c-chart>
+        </c-card-body>
+      </c-card>
+    </c-col>
+  </c-row>
